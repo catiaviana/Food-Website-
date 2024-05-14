@@ -35,13 +35,15 @@ $(document).ready(function() {
   });
 
 /** google_map js **/
-function myMap() {
+var myMap = function () {
     var mapProp = {
         center: new google.maps.LatLng(40.712775, -74.005973),
         zoom: 18,
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+window.onload = function () {
+    myMap();
 
 // client section owl carousel
 $(".client_owl-carousel").owlCarousel({
